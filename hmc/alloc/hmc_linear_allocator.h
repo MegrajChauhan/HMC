@@ -14,4 +14,6 @@ HMC_ATTR_NO_DISCARD HMC_ATTR_EXTERNAL hmcResult_t hmc_linear_allocator_init(
 HMC_ATTR_NO_DISCARD HMC_ATTR_EXTERNAL hmcResult_t
 hmc_linear_allocator_deinit(HMCAllocator **allocator) HMC_ATTR_NO_NULL;
 
+HMC_ATTR_NO_DISCARD HMC_ATTR_EXTERNAL hmcResult_t hmc_linear_allocator_expand(
+    HMCAllocator *allocator, hsize_t new_len, hsize_t* possible) HMC_ATTR_NO_NULL_SPECIFY(1);
 #endif

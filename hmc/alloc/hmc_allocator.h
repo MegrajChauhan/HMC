@@ -21,6 +21,8 @@ struct HMCAllocatorVT {
 
 enum hmcAllocator_t { HMC_ALLOCATOR_LINEAR, HMC_ALLOCATOR_INVALID };
 
+HMC_ATTR_NO_DISCARD HMC_ATTR_EXTERNAL hmcResult_t hmc_allocator_destroy(HMCAllocator **allocator) HMC_ATTR_NO_NULL;
+
 HMC_ATTR_NO_DISCARD HMC_ATTR_EXTERNAL hmcResult_t hmc_alloc(HMCAllocator *allocator, void **mem,
                                         hsize_t len) HMC_ATTR_NO_NULL;
 

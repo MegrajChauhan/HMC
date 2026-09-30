@@ -1,6 +1,6 @@
 CC=gcc
 FLAGS=-Wall -Wextra -g -fsanitize=address -fno-omit-frame-pointer
-INC_DIR=hmc/alloc hmc/init base arch defs utils
+INC_DIR=hmc/alloc hmc/init hmc/ds hmc/sync base arch defs utils
 SRC_DIR=test
 BUILD_DIR=./
 LIB=lib

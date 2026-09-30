@@ -25,7 +25,7 @@
 #define HMC_ATTR_NO_THROW __attribute__((no_throw))
 #define HMC_ATTR_NO_RETURN __attribute__((no_return))
 #define HMC_ATTR_NO_NULL __attribute__((nonnull))
-#define HMC_ATTR_NO_NULL_SPECIFY(...) __attribute__((nonnull, (__VA_ARGS__)))
+#define HMC_ATTR_NO_NULL_SPECIFY(...) __attribute__((nonnull(__VA_ARGS__)))
 #define HMC_ATTR_ALIAS(name) __attribute__((alias(#name)))
 #define HMC_ATTR_CONSTRUCTOR __attribute__((constructor))
 
