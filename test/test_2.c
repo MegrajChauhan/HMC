@@ -308,12 +308,6 @@ static void test_push_pop_interleaved(void)
 
 static void test_insert_at_front_middle_and_shifts(void)
 {
-    /*
-     * ASSUMPTION: insert is order-preserving (elements at/after 'index'
-     * shift towards the end). The doc text for push/insert is swapped in
-     * one sentence; this treats insert as "arbitrary position" and push
-     * as "append", which matches the function names.
-     */
     HMCStaticArray *arr = NULL;
     CHECK_OK(make_array(&arr, sizeof(int), 10));
     push_range(arr, 1, 4); /* 1 2 3 */

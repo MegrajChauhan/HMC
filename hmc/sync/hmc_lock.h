@@ -7,12 +7,12 @@
 
 typedef struct HMCMutexLock HMCMutexLock;
 
-HMC_ATTR_EXTERNAL HMC_ATTR_NO_DISCARD hmcResult_t hmc_mutex_init(HMCMutexLock* lock) HMC_ATTR_NO_NULL;
+HMC_ATTR_EXTERNAL HMC_ATTR_NO_DISCARD hmcResult_t hmc_mutex_init(HMCMutexLock** lock);
 
-HMC_ATTR_EXTERNAL HMC_ATTR_NO_DISCARD hmcResult_t hmc_mutex_deinit(HMCMutexLock *lock) HMC_ATTR_NO_NULL;
+HMC_ATTR_EXTERNAL HMC_ATTR_NO_DISCARD hmcResult_t hmc_mutex_deinit(HMCMutexLock **lock);
 
-HMC_ATTR_EXTERNAL HMC_ATTR_NO_DISCARD hmcResult_t hmc_mutex_lock(HMCMutexLock *lock) HMC_ATTR_NO_NULL;
+HMC_ATTR_EXTERNAL HMC_ATTR_NO_DISCARD hmcResult_t hmc_mutex_lock(HMCMutexLock *lock);
 
-HMC_ATTR_EXTERNAL HMC_ATTR_NO_DISCARD hmcResult_t hmc_mutex_unlock(HMCMutexLock *lock) HMC_ATTR_NO_NULL;
+HMC_ATTR_EXTERNAL HMC_ATTR_NO_DISCARD hmcResult_t hmc_mutex_unlock(HMCMutexLock *lock);
 
 #endif

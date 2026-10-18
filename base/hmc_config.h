@@ -4,6 +4,9 @@
 #define _HMC_HOST_ARCH_LITTLE_ENDIAN_ 0x00
 #define _HMC_HOST_ARCH_BIG_ENDIAN_ 0x01
 
+#ifndef __BYTE_ORDER__
+#error Host Byte Order could not be determined
+#endif
 #if __BYTE_ORDER__ == __ORDER_LITTLE_ENDIAN__
 #define _HMC_HOST_ARCH_BYTE_ORDER_ _HMC_HOST_ARCH_LITTLE_ENDIAN_
 #else
@@ -17,19 +20,19 @@
 #define _HMC_HOST_ARCH_x86_
 #endif
 
-#if defined(__x86_64)
+#if defined(__x86_64) || defined(__x86_64__)
 #define _HMC_HOST_ARCH_x86_
 #endif
 
 #if defined(__linux) || defined(__linux__) || defined(__gnu_linux__)
 #define _HMC_HOST_PLATFORM_LINUX_
 #define _USE_LINUX_
-#ifndef __USE_MISC // for STDLIB
+#ifndef __USE_MISC
 #define __USE_MISC
 #endif
 #endif
 
-#if __SIZEOF_VOID__ == 4
+#if __SIZEOF_POINTER__ == 4
 // This is a 32-bit system
 #error HMC Currently has no idea about 32-bit systems
 #endif
@@ -40,4 +43,4 @@
 #define _HMC_TYPE_LONG_ long long
 #endif
 
-#endif
+#endifendif

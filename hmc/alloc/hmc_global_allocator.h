@@ -5,10 +5,12 @@
 #include <hmc_base_types.h>
 #include <hmc_results.h>
 
-HMC_ATTR_NO_DISCARD HMC_ATTR_EXTERNAL hmcResult_t hmc_g_alloc(void **mem, hsize_t nbytes) HMC_ATTR_NO_NULL;
-HMC_ATTR_NO_DISCARD HMC_ATTR_EXTERNAL hmcResult_t hmc_g_realloc(void **mem, hsize_t nbytes) HMC_ATTR_NO_NULL;
-HMC_ATTR_NO_DISCARD HMC_ATTR_EXTERNAL hmcResult_t hmc_g_ialloc(void **mem, hsize_t nbytes,
+HMC_ATTR_EXTERNAL HMC_ATTR_NO_DISCARD hmcResult_t hmc_g_alloc(void **mem, hsize_t nbytes) HMC_ATTR_NO_NULL;
+HMC_ATTR_EXTERNAL HMC_ATTR_NO_DISCARD hmcResult_t hmc_g_realloc(void **mem, hsize_t nbytes) HMC_ATTR_NO_NULL;
+HMC_ATTR_EXTERNAL HMC_ATTR_NO_DISCARD hmcResult_t hmc_g_ialloc(void **mem, hsize_t nbytes,
                                            u8_t val) HMC_ATTR_NO_NULL;
-HMC_ATTR_NO_DISCARD HMC_ATTR_EXTERNAL hmcResult_t hmc_g_free(void **mem) HMC_ATTR_NO_NULL;
+HMC_ATTR_EXTERNAL HMC_ATTR_NO_DISCARD hmcResult_t hmc_g_free(void **mem) HMC_ATTR_NO_NULL;
+
+HMC_ATTR_EXTERNAL HMC_ATTR_NO_DISCARD hmcResult_t hmc_g_allocator_flush(i64_t max_alloc_size);
 
 #endif

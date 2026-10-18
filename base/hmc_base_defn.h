@@ -22,16 +22,13 @@
 #endif
 
 #define HMC_ATTR_NO_DISCARD __attribute__((nodiscard))
-#define HMC_ATTR_NO_THROW __attribute__((no_throw))
-#define HMC_ATTR_NO_RETURN __attribute__((no_return))
+#define HMC_ATTR_NO_THROW __attribute__((nothrow))
+#define HMC_ATTR_NO_RETURN __attribute__((noreturn))
 #define HMC_ATTR_NO_NULL __attribute__((nonnull))
 #define HMC_ATTR_NO_NULL_SPECIFY(...) __attribute__((nonnull(__VA_ARGS__)))
 #define HMC_ATTR_ALIAS(name) __attribute__((alias(#name)))
 #define HMC_ATTR_CONSTRUCTOR __attribute__((constructor))
-
-#ifdef _USE_LINUX_
 #define _HMC_ATTR_EXPORT_ __attribute__((visibility("default")))
-#endif
 
 #define HMC_ATTR_INTERNAL                                                      \
   static // for a variable or a function that is localized to a module only
@@ -56,7 +53,7 @@
 #define _hmc_signExtend32(val)                                                 \
   do {                                                                         \
     if ((val >> 31) == 1)                                                      \
-      val |= 0xFFFFFFFFFF000000;                                               \
+      val |= 0xFFFFFFFF00000000;                                               \
   } while (0)
 
 #define _hmc_isUpperCase(ch) ((ch) >= 'A' && (ch) <= 'Z')
