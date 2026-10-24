@@ -6,6 +6,15 @@
 #include <hmc_results.h>
 
 typedef struct HMCMemoryMap HMCMemoryMap;
+typedef struct HMCMapProps HMCMapProps;
+
+struct HMCMapProps {
+  u64_t readable: 1;
+  u64_t writable: 1;
+  u64_t executable: 1; /*Currently won't be implemented*/
+  u64_t private: 1; // '1' = private else share [in terms of process ownership]
+  u64_t resb: 60;
+};
 
 #define hmc_memory_map_get_mapped_memory(map, len, ...) hmc_memory_map_get_mapped_memory_((map), (len), (HMCMapProps){.readable=1, .writable=1, .executable=0, .private=1, ##__VA_ARGS__})
 

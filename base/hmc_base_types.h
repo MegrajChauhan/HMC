@@ -20,6 +20,10 @@ typedef int i32_t;
 typedef _HMC_TYPE_LONG_ i64_t;
 
 typedef u64_t hsize_t;
+typedef i64_t hepoch_t;
+
+typedef u32_t hwidechar_t;
+typedef u32_t hcodepoint_t;
 
 #ifndef __cplusplus
 typedef _Atomic hsize_t atm_hsize_t;
@@ -47,5 +51,6 @@ typedef std::atomic<i64_t> atm_i64_t;
 
 typedef char *string_t;
 typedef const char *cstring_t;
+typedef u8_t* byteptr_t;
 
 #endif
