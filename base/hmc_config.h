@@ -43,4 +43,4 @@
 #define _HMC_TYPE_LONG_ long long
 #endif
 
-#endifendif
+#endif
