@@ -7,13 +7,13 @@
 
 typedef struct HMCLinearAllocator HMCLinearAllocator;
 
-HMC_ATTR_EXTERNAL HMC_ATTR_NO_DISCARD hmcResult_t hmc_linear_allocator_init(
+HMC_ATTR_EXTERNAL hmcResult_t hmc_linear_allocator_init(
     HMCAllocator **allocator, hsize_t len, hsize_t alignment) HMC_ATTR_NO_NULL;
 
-HMC_ATTR_EXTERNAL HMC_ATTR_NO_DISCARD hmcResult_t hmc_linear_allocator_expand(
+HMC_ATTR_EXTERNAL hmcResult_t hmc_linear_allocator_expand(
     HMCAllocator *allocator, hsize_t new_len, hsize_t* possible) HMC_ATTR_NO_NULL;
 
-HMC_ATTR_EXTERNAL HMC_ATTR_NO_DISCARD hmcResult_t
+HMC_ATTR_EXTERNAL hmcResult_t
 hmc_linear_allocator_deinit(HMCAllocator **allocator) HMC_ATTR_NO_NULL;
 
 #endif

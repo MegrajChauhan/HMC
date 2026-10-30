@@ -7,12 +7,12 @@
 
 typedef struct HMCPoolAllocator HMCPoolAllocator;
 
-HMC_ATTR_EXTERNAL HMC_ATTR_NO_DISCARD hmcResult_t hmc_pool_allocator_init(HMCAllocator **allocator) HMC_ATTR_NO_NULL;
+HMC_ATTR_EXTERNAL hmcResult_t hmc_pool_allocator_init(HMCAllocator **allocator) HMC_ATTR_NO_NULL;
 
-HMC_ATTR_EXTERNAL HMC_ATTR_NO_DISCARD hmcResult_t hmc_pool_allocator_deinit(HMCAllocator **allocator) HMC_ATTR_NO_NULL;
+HMC_ATTR_EXTERNAL hmcResult_t hmc_pool_allocator_deinit(HMCAllocator **allocator) HMC_ATTR_NO_NULL;
 
-HMC_ATTR_EXTERNAL HMC_ATTR_NO_DISCARD hmcResult_t hmc_pool_allocator_share(HMCAllocator **src, HMCAllocator **dst) HMC_ATTR_NO_NULL;
+HMC_ATTR_EXTERNAL hmcResult_t hmc_pool_allocator_share(HMCAllocator **src, HMCAllocator **dst) HMC_ATTR_NO_NULL;
 
-HMC_ATTR_EXTERNAL HMC_ATTR_NO_DISCARD hmcResult_t hmc_pool_allocator_unshare(HMCAllocator **allocator) HMC_ATTR_NO_NULL;
+HMC_ATTR_EXTERNAL hmcResult_t hmc_pool_allocator_unshare(HMCAllocator **allocator) HMC_ATTR_NO_NULL;
 
 #endif

@@ -18,10 +18,10 @@ struct HMCConfig {
                                                      .alloc_g_alloc_lim = 4*1024, \
                                                       ##__VA_ARGS__})
 
-HMC_ATTR_EXTERNAL HMC_ATTR_NO_DISCARD hmcResult_t hmc_lib_init_(HMCConfig conf);
+HMC_ATTR_EXTERNAL hmcResult_t hmc_lib_init_(HMCConfig conf);
 
-HMC_ATTR_EXTERNAL HMC_ATTR_NO_DISCARD hmcResult_t hmc_lib_deinit();
+HMC_ATTR_EXTERNAL hmcResult_t hmc_lib_deinit();
 
-HMC_ATTR_EXTERNAL HMC_ATTR_NO_DISCARD hmcResult_t hmc_lib_set_alloc_g_flush_max(double flush_max);
+HMC_ATTR_EXTERNAL hmcResult_t hmc_lib_set_alloc_g_flush_max(double flush_max);
 
 #endif
