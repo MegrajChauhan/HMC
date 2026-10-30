@@ -7,7 +7,7 @@
 
 typedef struct HMCPoolAllocator HMCPoolAllocator;
 
-HMC_ATTR_EXTERNAL hmcResult_t hmc_pool_allocator_init(HMCAllocator **allocator) HMC_ATTR_NO_NULL;
+HMC_ATTR_EXTERNAL hmcResult_t hmc_pool_allocator_init(HMCAllocator **allocator, hsize_t alloc_limit) HMC_ATTR_NO_NULL;
 
 HMC_ATTR_EXTERNAL hmcResult_t hmc_pool_allocator_deinit(HMCAllocator **allocator) HMC_ATTR_NO_NULL;
 
