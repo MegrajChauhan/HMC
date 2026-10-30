@@ -1,6 +1,7 @@
 #ifndef _HMC_ALLOCATOR_
 #define _HMC_ALLOCATOR_
 
+#include <hmc_base_defn.h>
 #include <hmc_base_types.h>
 #include <hmc_results.h>
 

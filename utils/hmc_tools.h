@@ -2,6 +2,7 @@
 #define _HMC_TOOLS_
 
 #include <hmc_base_defn.h>
+#include <stdlib.h>
 #include <stdio.h>
 
 #define _hmc_assert(cond, msg) \
